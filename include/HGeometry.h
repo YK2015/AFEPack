@@ -666,7 +666,7 @@ class HGeometry<0,DOW> : public Point<DOW>, public HGeometryInfo<0>, public HGeo
 
 
 
-template <int DOW=1>
+template <int DOW>
   class HGeometry<1,DOW> : public HGeometryInfo<1>, public HGeometryBase
   {
   public:
@@ -700,7 +700,7 @@ template <int DOW=1>
   friend std::ostream& operator<< <>(std::ostream&, const HGeometry<1,DOW>&);
   };
 
-template <int DOW=2>
+template <int DOW>
   class HGeometry<2,DOW> : public HGeometryInfo<2>, public HGeometryBase
   {
   public:
@@ -740,7 +740,7 @@ template <int DOW=2>
   friend std::ostream& operator<< <>(std::ostream&, const HGeometry<2,DOW>&);
   };
 
-template <int DOW=3>
+template <int DOW>
   class HGeometry<3,DOW> : public HGeometryInfo<3>, public HGeometryBase
   {
   public:

@@ -163,6 +163,24 @@ public:
     return colnums;
   }
 
+	void
+	print_gnuplot (std::ostream &out) const
+	{
+	  for (index_t i=0; i<rows; ++i)
+    for (size_t  j=rowstart[i]; j<rowstart[i+1]; ++j)
+      if (colnums[j] != invalid_entry)
+        // while matrix entries are
+        // usually written (i,j),
+        // with i vertical and j
+        // horizontal, gnuplot output
+        // is x-y, that is we have to
+        // exchange the order of
+        // output
+        out << colnums[j] << " " << -static_cast<signed int>(i) << std::endl;
+
+}
+
+
 private:
   index_t max_dim; 
   index_t rows, cols; 

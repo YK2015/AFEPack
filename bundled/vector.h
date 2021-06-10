@@ -116,7 +116,7 @@ class Vector : public VectorType<T, Dynamic> {
   typedef VectorType<T, Dynamic> base_t;
   typedef typename Eigen::Matrix<T, Dynamic, 1>::Index index_t;
 public:
-  using base_t::scalar_t;
+  using typename base_t::scalar_t;
   using base_t::base_t; 
 
   typedef T* iterator;
